@@ -1,0 +1,20 @@
+# docker-compose.yml
+version: '3.8'
+services:
+  backend:
+    container_name: ada_price_tracker
+    build: .
+    environment:
+      SERVER_HOST: 127.0.0.1
+      SERVER_PORT: 3000
+      SERVER_HOST_NAME: 127.0.0.1:3000
+      SERVER_HOST_CRYPTO: https://api.coingecko.com/api/v3
+      BASE_URL: /api/shinka
+      DOCS_BASE_URL: /docs/shinka
+      DISCORD_CLIENT_ID: 1078595354586513469
+      DISCORD_WEBHOOK_TOKEN: UIOhjGSDTLyCmsYznXAgY3ietymW8VBq1Uh47I9UsCA4_NMLi2wqpeLkDFTFOEQUNUk1
+
+    volumes:
+      - /app/node_modules
+    ports:
+      - '3000:3000'
