@@ -12,7 +12,24 @@ https://vimeo.com/801790002
 
 https://vimeo.com/801790169
 
-## 3. Media App
+## 3. Price Tracker
+
+### How to start
+
+A simple API server that provides endpoints to retrieve ADA price in different resolutions.
+
+1. To sign up for discord notification, join this server via: https://discord.gg/rZwgGV35
+
+2. Run the project
+
+```
+docker-compose up
+```
+
+API Docs: http://127.0.0.1:3000/docs/shinka
+<br/><br/>
+
+## 4. Media App
 
 ### Let's go through each requirement:
 
