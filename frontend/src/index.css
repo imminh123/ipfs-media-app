@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: "#fff";
+    font-family: "Montserrat Alternates", sans-serif;
+    padding: 0;
+  }
+
+  h1 {
+    font-family: "Orbitron", sans-serif;
+  }
+
+  #popup-2 {
+    padding: 0;
+    border-radius: 100px;
+    border: none;
+  }
+
+  .vjs-big-play-centered {
+    padding-top: 56.25%;
+  }
+}

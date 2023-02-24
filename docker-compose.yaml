@@ -1,0 +1,42 @@
+# docker-compose.yml
+version: "3.8"
+services:
+  client:
+    build: ./frontend
+    container_name: client
+    ports:
+      - "5174:80"
+    environment:
+      COOKIE_SECRET: s1sqA1WtF1m2565YZp1Z
+      VITE_CLIENT_ID: 1077791781065867334
+      VITE_CLIENT_SECRET: qdTIcTv0qQ5m2ZMfv4SFJmpsUgBzlOPS
+      VITE_DOMAIN: http://127.0.0.1:5174
+      VITE_BACKEND_DOMAIN: http://127.0.0.1:3000
+      MONGODB_URI: mongodb+srv://minhnguyen:superpassword@cluster0.lfo7s.mongodb.net/api-shinka?retryWrites=true&w=majority
+      MONGODB_DB: api-shinka
+      VITE_WEB3STORAGE_TOKEN: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDljODI3M0Q0NUZDZDEwMzZBYTQ4ZTRhMjE1YUNiZTQxQTE3MzM0Q2EiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NzcwOTg4NTQwMTQsIm5hbWUiOiJzaGlua2EifQ.liPcXG4SjVONDYUPnivBqvQOa_gJ-LWRY04q2llEzWk
+      REDIS_PORT: 6379
+      REDIS_HOST: localhost
+
+  backend:
+    container_name: backend
+    build: ./backend
+    environment:
+      SERVER_HOST: 127.0.0.1
+      SERVER_PORT: 3000
+      SERVER_HOST_NAME: 127.0.0.1:3000
+      CLIENT_DOMAIN: http://127.0.0.1:5174
+      BASE_URL: /api/shinka
+      DOCS_BASE_URL: /docs/shinka
+      DISCORD_APP_ID: 1077791781065867334
+      DISCORD_APP_SECRET: qdTIcTv0qQ5m2ZMfv4SFJmpsUgBzlOPS
+      DISCORD_REDIRECT_URI: http://127.0.0.1:3000/api/shinka/auth/callback
+      SESSION_SECRET: shinka
+      WEB3_STORAGE_TOKEN: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDljODI3M0Q0NUZDZDEwMzZBYTQ4ZTRhMjE1YUNiZTQxQTE3MzM0Q2EiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NzcwOTg4NTQwMTQsIm5hbWUiOiJzaGlua2EifQ.liPcXG4SjVONDYUPnivBqvQOa_gJ-LWRY04q2llEzWk
+      PUBLIC_KEY: fccea3fc19ced28fe1f928f8899234f0598148e8ea16bc2a5d038608055ec9b7
+      DB_URI: mongodb+srv://minhnguyen:superpassword@cluster0.lfo7s.mongodb.net/api-shinka?retryWrites=true&w=majority
+
+    volumes:
+      - /app/node_modules
+    ports:
+      - "3000:3000"
