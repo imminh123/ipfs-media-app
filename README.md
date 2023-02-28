@@ -60,3 +60,7 @@ docker-compose up
 Client: http://127.0.0.1:5174 <br/>
 API Docs: http://127.0.0.1:3000/docs/shinka
 <br/><br/>
+
+## 3. ADA Price Tracker
+
+I wouldn't expect that it took quite a while to reseach for some technologies/alternatives for task #4 that it left me with little time for this task. My health hasn't treated me well for this week to stay up too late. However the task seems overall in my capabilities (I'm half-way there), I will submit it ~24h late if that's allowed, once again my applogized for this 😢
