@@ -4,6 +4,21 @@ Thank you for this opportunity, not just for the interview but also for the chal
 
 # How to start
 
+## 4.1 Prime number
+
+### Work breakdown
+
+1. Scratching head looking for an optimized algorithm for generating prime numbers -> Sieve of Eratosthenes
+2. Implement infinite scroll with IntersectionObserver
+3. Generating prime numbers (16 \* 50) on demand with generator function
+4. The rest is basic React, nothing special
+
+```
+docker-compose up
+```
+
+Client: http://127.0.0.1:5173 <br/>
+
 ## 1. User State Behavihour Challenge <br/>
 
 https://vimeo.com/801790002
@@ -60,7 +75,3 @@ docker-compose up
 Client: http://127.0.0.1:5174 <br/>
 API Docs: http://127.0.0.1:3000/docs/shinka
 <br/><br/>
-
-## 3. ADA Price Tracker
-
-I wouldn't expect that it took quite a while to reseach for some technologies/alternatives for task #4 that it left me with little time for this task. My health hasn't treated me well for this week to stay up too late. However the task seems overall in my capabilities (I'm half-way there), I will submit it ~24h late if that's allowed, once again my applogized for this 😢
