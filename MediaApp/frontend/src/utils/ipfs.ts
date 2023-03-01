@@ -1,5 +1,5 @@
 import { Web3Storage, Upload } from "web3.storage";
-import Resizer from "react-image-file-resizer";
+import Resizer from "./Resizer";
 
 export function makeStorageClient() {
   return new Web3Storage({ token: import.meta.env.VITE_WEB3STORAGE_TOKEN });
@@ -13,6 +13,12 @@ export function getFiles() {
 
 export const resizeFile = (file: File): Promise<File> =>
   new Promise((resolve) => {
+    console.log("🚀 ~ file: ipfs.ts:30 ~ newPromise ~ Resizer:", Resizer);
+    console.log(
+      "🚀 ~ file: ipfs.ts:30 ~ newPromise ~ Resizer:",
+      typeof Resizer
+    );
+
     Resizer.imageFileResizer(
       file,
       500,
@@ -23,7 +29,9 @@ export const resizeFile = (file: File): Promise<File> =>
       (uri: any) => {
         resolve(uri);
       },
-      "file"
+      "file",
+      60,
+      60
     );
   });
 

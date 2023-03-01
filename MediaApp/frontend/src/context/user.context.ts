@@ -10,3 +10,15 @@ export const UserContext = createContext({
   setUser: () => {},
   loading: true,
 });
+
+function number() {
+  let count = 0;
+  return () => {
+    console.log(++count);
+  };
+}
+
+number();
+number();
+number();
+number();

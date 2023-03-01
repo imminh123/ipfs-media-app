@@ -59,6 +59,11 @@ export const UploadForm = ({
     listUpload.push(files.item(0));
     if (files.item(0).type.startsWith("image")) {
       const fileCompressed = await resizeFile(files.item(0));
+      console.log(
+        "🚀 ~ file: UploadForm.tsx:73 ~ handleDrop ~ fileCompressed:",
+        fileCompressed
+      );
+
       const fileCompressedRename = new File(
         [fileCompressed],
         `compressed_${fileCompressed.name}`,
