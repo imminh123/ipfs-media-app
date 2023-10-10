@@ -1,7 +1,3 @@
-# Disclaimer
-
-Thank you for this opportunity, not just for the interview but also for the challenge that I believe myself can do much better than this. I won't bored you with personal reasons behind the delay and the incompletes, this week was so hectic. No matter whether or not becoming a part of Shinka Network, I appreciate the challenge that I desperately need recently to spice up my ambition and curiosity. There're always things to learn even from this test project. I enjoyed this very much and would love hear your feedback if possible. Have a nice day!
-
 # How to start
 
 ## 4.1 Prime number
